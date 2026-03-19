@@ -118,24 +118,39 @@ const Footer = () => {
           <p style={{ color: '#555', fontSize: '0.82rem', margin: 0 }}>
             © {new Date().getFullYear()} Rehan Pvt Ltd. All rights reserved.
           </p>
-          <div className="d-flex gap-3">
+          <div className="d-flex align-items-center gap-3">
             {[
               { label: 'Privacy', to: '/privacy' },
               { label: 'Terms', to: '/terms' },
               { label: 'Refund', to: '/refund-policy' },
             ].map(l => (
-              <Link key={l.label} to={l.to}
-                style={{ color: '#555', fontSize: '0.82rem', textDecoration: 'none' }}
-                onMouseOver={e => e.target.style.color = '#f5a623'}
-                onMouseOut={e => e.target.style.color = '#555'}>
-                {l.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </Container>
-    </footer>
-  );
-};
+            <Link key={l.label} to={l.to}
+            style={{ color: '#555', fontSize: '0.82rem', textDecoration: 'none' }}
+            onMouseOver={e => e.target.style.color = '#f5a623'}
+            onMouseOut={e => e.target.style.color = '#555'}>
+              {l.label}
+            </Link>
+          ))}
+          
+          <a href="https://github.com/Rehan286002/mern-ecommerce-platform"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            display: 'flex', alignItems: 'center', gap: '0.4rem',
+            background: '#1a1a1a', border: '1px solid #333',
+            color: '#ccc', fontSize: '0.82rem', textDecoration: 'none',
+            padding: '0.3rem 0.75rem', borderRadius: 6,
+            transition: 'border-color 0.2s, color 0.2s',
+            }}
+            onMouseOver={e => { e.currentTarget.style.borderColor = '#f5a623'; e.currentTarget.style.color = '#f5a623'; }}
+            onMouseOut={e => { e.currentTarget.style.borderColor = '#333'; e.currentTarget.style.color = '#ccc'; }}
+            >
+            <FaGithub style={{ fontSize: '0.9rem' }} />View Source</a>
+            </div>
+            </div>
+            </Container>
+            </footer>
+          );
+        };
 
 export default Footer;
