@@ -29,8 +29,3 @@ desktop.ini
 
 # VS Code
 .vscode/
-
-# Seeder (optional - don't deploy this)
-backend/seeder.js
-
-collect-code.ps1
