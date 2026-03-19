@@ -1,0 +1,25 @@
+/* Fix Accordion dark theme */
+.accordion-button {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #2a2a2a !important;
+  color: #f5a623 !important;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-item {
+  background-color: #1e1e1e !important;
+  border-color: #2a2a2a !important;
+}
+
+.accordion-body {
+  background-color: #1a1a1a !important;
+  color: #aaaaaa !important;
+}
