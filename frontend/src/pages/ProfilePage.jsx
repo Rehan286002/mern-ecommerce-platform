@@ -27,7 +27,6 @@ const ProfilePage = () => {
   const [country, setCountry] = useState('India');
 
   // Password states
-  const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
@@ -85,7 +84,6 @@ const ProfilePage = () => {
     try {
       await axiosInstance.put('/users/profile', { password: newPassword });
       toast.success('Password changed successfully!');
-      setCurrentPassword('');
       setNewPassword('');
       setConfirmPassword('');
     } catch (err) {

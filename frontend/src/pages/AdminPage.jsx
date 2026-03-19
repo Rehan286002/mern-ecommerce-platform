@@ -23,6 +23,7 @@ const STATUS_COLORS = {
 
 // ─── Reusable Chart Hook ──────────────────────────────────────
 const useChart = (ref, config, deps) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!ref.current) return;
     const chart = new Chart(ref.current, config);
@@ -74,6 +75,7 @@ const AdminPage = () => {
   const topCatChartRef = useRef(null);
 
   // Load all data
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetchAll = async () => {
       try {
