@@ -1,6 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaShieldAlt } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
 
 const sections = [
   {
