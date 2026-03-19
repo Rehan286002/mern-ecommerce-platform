@@ -16,7 +16,6 @@ const RegisterPage = () => {
   const [confirm, setConfirm] = useState('');
   const [matchError, setMatchError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirm, setShowConfirm] = useState(false);
 
   useEffect(() => {
     if (userInfo) navigate('/');
@@ -64,21 +63,12 @@ const RegisterPage = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Confirm Password</Form.Label>
-              <div style={{ position: 'relative' }}>
-                <Form.Control
-                  type={showConfirm ? 'text' : 'password'}
-                  value={confirm}
-                  onChange={(e) => setConfirm(e.target.value)}
-                  required
-                  style={{ paddingRight: '2.5rem' }}
-                />
-                <span
-                  onClick={() => setShowConfirm(!showConfirm)}
-                  style={{ position: 'absolute', right: '0.75rem', top: '50%', transform: 'translateY(-50%)', cursor: 'pointer', color: '#888' }}
-                >
-                  {showConfirm ? <FaEyeSlash /> : <FaEye />}
-                </span>
-              </div>
+              <Form.Control
+                type="password"
+                value={confirm}
+                onChange={(e) => setConfirm(e.target.value)}
+                required
+              />
             </Form.Group>
             <Button type="submit" variant="dark" className="w-100" disabled={loading}>
               {loading ? 'Creating...' : 'Register'}
