@@ -11,7 +11,7 @@ A full-stack e-commerce web application built with the **MERN stack** (MongoDB, 
 | Service | URL |
 |---|---|
 | Frontend | https://rehan-shop.vercel.app |
-| Backend API | [https://your-api.onrender.com](https://mern-ecommerce-backend-2lg3.onrender.com) |
+| Backend API | https://mern-ecommerce-backend-2lg3.onrender.com |
 
 ---
 
